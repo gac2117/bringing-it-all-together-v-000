@@ -53,10 +53,7 @@ class Dog
       WHERE id = ? LIMIT 1
       SQL
     DB[:conn].execute(sql, id).map do |row|
-      self.id = row[0]
-      self.name = row[1]
-      self.breed = row[2]
-      self
+      self.new_from_db
     end.first
   end
 
