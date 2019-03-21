@@ -50,7 +50,6 @@ class Dog
       SQL
     dog = DB[:conn].execute(sql, id)[0]
     Dog.new(id: dog[0], name: dog[1], breed: dog[2])
-    self
   end
 
   def save
