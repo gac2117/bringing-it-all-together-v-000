@@ -53,7 +53,6 @@ class Dog
       WHERE id = ? LIMIT 1
       SQL
     DB[:conn].execute(sql, id)
-    self
   end
 
   def save
