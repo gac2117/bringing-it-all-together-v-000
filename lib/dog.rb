@@ -28,7 +28,7 @@ class Dog
     dog.save
     dog
   end
-  
+
   def self.new_from_db(row)
     new_dog = self.new
     new_dog.id = row[0]
