@@ -23,6 +23,12 @@ class Dog
     DB[:conn].execute("DROP TABLE dogs")
   end
 
+  def self.create(name:, breed:)
+    dog = self.new(name, breed)
+    dog.save
+    dog
+  end
+  
   def self.new_from_db(row)
     new_dog = self.new
     new_dog.id = row[0]
